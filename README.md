@@ -6,7 +6,7 @@
   
   <h3 align="center">Mock Up DOS</h3>
   
-  <p align="center">Mock Up DOS is my homework for Data Structures and Algorithms lecture written in C programming language. Allows user to create, remove and display directories. </p>
+  <p align="center">Mock Up DOS is my homework for Data Structures and Algorithms lecture written in C programming language. Allows users to create, remove and display directories. </p>
   <p align="center"><img src="screenshots/Screenshot from 2021-08-19 12-21-00.png">
 </p>
 
