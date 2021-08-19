@@ -102,17 +102,17 @@ void dir(DIR *currentDirectory)
 {
     DIR *tmp;
     if (currentDirectory->parent != NULL)
-        printf("\n%c%s\n   %c%s%c", 191, currentDirectory->parent->name, 192, currentDirectory->name, 191);
+        printf("\n┐ %s\n   └ %s┐ ", currentDirectory->parent->name, currentDirectory->name);
     else
-        printf("\n   %c%s%c", 192, currentDirectory->name, 191);
+        printf("\n   └ %s ┐ ", currentDirectory->name);
 
     if (currentDirectory->firstChild != NULL)
     {
-        printf("\n\t%c%s", 192, currentDirectory->firstChild->name);
+        printf("\n\t└ %s", currentDirectory->firstChild->name);
         tmp = currentDirectory->firstChild;
         while (tmp->nextSibling)
         {
-            printf("\n\t%c%s", 192, tmp->nextSibling->name);
+            printf("\n\t└ %s", tmp->nextSibling->name);
             tmp = tmp->nextSibling;
         }
     }
@@ -224,9 +224,9 @@ void main()
         else if (!strcmp(cmd, "help"))
         {
             printf(">help"
-                   "\n>mkdir filename\tCreates a directory at current directory with given name"
-                   "\n>chdir filename\tSwitches to the directory with given name"
-                   "\n>rmdir filename\tRemoves the directory with given name"
+                   "\n>mkdir dirname\tCreates a directory at current directory with given name"
+                   "\n>chdir dirname\tSwitches to the directory with given name"
+                   "\n>rmdir dirname\tRemoves the directory with given name"
                    "\n>dir\tDisplays parent directory and all child directories"
                    "\n>count\tDisplays the number of child directories in current directory",
                    "\n>help\tDisplays avaliable commands"
